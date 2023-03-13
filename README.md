@@ -1,2 +1,2 @@
-# next_flow_example
-repo with example of nextflow for lab meeting
+# nextflow_example
+repo with example of nextflow for our lab meeting
