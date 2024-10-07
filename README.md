@@ -3,11 +3,16 @@ repo with example of nextflow for our lab meeting
 
 # instructions:
 run on your terminal:
-"chmod 744 ./setup.sh"
-"./setup.sh"
-"export JAVA_CMD=/private/common/Software/Java/jdk-11.0.2/bin/java"
+cd nextflow_example;  sh ./setup.sh
+// script
+nextflow run simple.nf
+nextflow run simple.nf --example_str 'Hello Levinon Lib!’ 
+// config:
+nextflow run ./simple_with_config.nf
+nextflow -c ./my_simple_config.config run ./simple_with_config.nf
+nextflow -c ./my_simple_config.config run ./simple_with_config.nf -profile apobec
+nextflow -c ./my_simple_config.config run ./simple_with_config.nf -profile adar
 
-for runing the example use:
-"./nextflow run simple.nf"
-./nextflow run QC.nf
-./nextflow run QC.nf --reads 'data/*_{1,2}.fq'
+
+nextflow run QC.nf
+nextflow run QC.nf --reads 'data/*_{1,2}.fq'

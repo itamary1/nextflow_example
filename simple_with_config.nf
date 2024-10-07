@@ -1,4 +1,3 @@
-params.example_str = 'Hello Levanon Lab!'
 
 process splitLetters {
   input:
@@ -23,9 +22,9 @@ process convertToUpper {
 }
 
 workflow {
-  println "Example string: ${params.example_str}"
+  println "Example string: ${params.processed_str}"
   // create a channel of splitted letters files from the input string
-  str_splitted = splitLetters(params.example_str).flatten()
+  str_splitted = splitLetters(params.processed_str).flatten()
   // str_splitted.view()
   // convert the splitted letters to uppercase
   convertToUpper(str_splitted)
