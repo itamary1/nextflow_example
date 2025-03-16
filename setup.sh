@@ -2,8 +2,8 @@
 
 cp ~/.bashrc ~/.bashrc.nextflow_back
 echo -e '\n#set java path for nextflow:' >> ~/.bashrc
-echo -e 'export JAVA_CMD=/private/common/Software/Java/jdk-11.0.2/bin/java' >> ~/.bashrc
-echo "JAVA_CMD has been set to /private/common/Software/Java/jdk-11.0.2/bin/java"
+echo -e 'export JAVA_CMD=/usr/lib/jvm/java-17-openjdk-17.0.14.0.7-2.el9.x86_64/bin/java' >> ~/.bashrc
+echo "JAVA_CMD has been set to /usr/lib/jvm/java-17-openjdk-17.0.14.0.7-2.el9.x86_64/bin/java"
 
 {
     nextflow &> /dev/null
